@@ -1,0 +1,898 @@
+/* =========================================================
+   NOVA AI - MAIN STYLESHEET
+   ========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #08090d;
+    color: white;
+    min-height: 100vh;
+}
+
+
+/* =========================================================
+   SIDEBAR
+   ========================================================= */
+
+.sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+
+    width: 250px;
+
+    background: #0d0f14;
+    border-right: 1px solid #20242d;
+
+    padding: 22px 16px;
+
+    display: flex;
+    flex-direction: column;
+
+    z-index: 100;
+}
+
+
+/* Logo */
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+
+    padding: 8px 10px 28px;
+}
+
+.logo-icon {
+    width: 42px;
+    height: 42px;
+
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(
+        135deg,
+        #7c3aed,
+        #06b6d4
+    );
+
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.logo h2 {
+    font-size: 18px;
+}
+
+.logo p {
+    color: #777d89;
+    font-size: 11px;
+    margin-top: 3px;
+}
+
+
+/* =========================================================
+   NEW CHAT
+   ========================================================= */
+
+.new-chat {
+    width: 100%;
+
+    padding: 13px;
+
+    margin-bottom: 20px;
+
+    border: 0;
+    border-radius: 10px;
+
+    background: linear-gradient(
+        135deg,
+        #7c3aed,
+        #6366f1
+    );
+
+    color: white;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+.new-chat:hover {
+    box-shadow: 0 8px 25px rgba(124, 58, 237, 0.3);
+
+    transform: translateY(-1px);
+}
+
+
+/* =========================================================
+   NAVIGATION
+   ========================================================= */
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.nav button {
+    width: 100%;
+
+    padding: 13px;
+
+    border: 1px solid transparent;
+    border-radius: 10px;
+
+    background: transparent;
+    color: #9298a5;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+
+    font-size: 13px;
+}
+
+.nav button:hover {
+    background: #151820;
+    color: white;
+}
+
+.nav button.active {
+    background: rgba(124, 58, 237, 0.15);
+    color: #c4b5fd;
+
+    border-color: rgba(124, 58, 237, 0.15);
+}
+
+
+/* =========================================================
+   USER AREA
+   ========================================================= */
+
+.sidebar-bottom {
+    margin-top: auto;
+}
+
+.user {
+    padding: 12px;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    background: #14171e;
+
+    border: 1px solid #20242d;
+
+    border-radius: 10px;
+}
+
+.avatar {
+    width: 36px;
+    height: 36px;
+
+    flex-shrink: 0;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: linear-gradient(
+        135deg,
+        #7c3aed,
+        #06b6d4
+    );
+
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.user strong {
+    font-size: 12px;
+}
+
+.user span {
+    display: block;
+
+    margin-top: 3px;
+
+    color: #777d89;
+
+    font-size: 10px;
+}
+
+
+/* =========================================================
+   MAIN
+   ========================================================= */
+
+.main {
+    margin-left: 250px;
+
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* =========================================================
+   HEADER
+   ========================================================= */
+
+.header {
+    height: 70px;
+
+    padding: 0 30px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    border-bottom: 1px solid #1c2028;
+
+    flex-shrink: 0;
+}
+
+.header-title h1 {
+    font-size: 17px;
+}
+
+.header-title p {
+    color: #777d89;
+
+    font-size: 11px;
+
+    margin-top: 4px;
+}
+
+
+/* AI Online */
+
+.status {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+
+    color: #8f96a3;
+
+    font-size: 11px;
+}
+
+.status-dot {
+    width: 7px;
+    height: 7px;
+
+    border-radius: 50%;
+
+    background: #22c55e;
+
+    box-shadow: 0 0 10px #22c55e;
+}
+
+
+/* =========================================================
+   CHAT AREA
+   ========================================================= */
+
+.chat {
+    flex: 1;
+
+    max-width: 950px;
+
+    width: 100%;
+
+    margin: 0 auto;
+
+    padding: 45px 30px 170px;
+}
+
+
+/* =========================================================
+   WELCOME SCREEN
+   ========================================================= */
+
+.welcome {
+    text-align: center;
+
+    margin-top: 70px;
+
+    transition: 0.3s;
+}
+
+.ai-symbol {
+    width: 70px;
+    height: 70px;
+
+    margin: auto;
+
+    border-radius: 20px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(124, 58, 237, 0.15);
+
+    border: 1px solid rgba(124, 58, 237, 0.25);
+
+    color: #c4b5fd;
+
+    font-size: 32px;
+
+    box-shadow: 0 0 35px rgba(124, 58, 237, 0.08);
+}
+
+.welcome h2 {
+    margin-top: 20px;
+
+    font-size: 30px;
+}
+
+.welcome h2 span {
+    background: linear-gradient(
+        90deg,
+        #a78bfa,
+        #22d3ee
+    );
+
+    -webkit-background-clip: text;
+    background-clip: text;
+
+    color: transparent;
+}
+
+.welcome p {
+    max-width: 550px;
+
+    margin: 10px auto;
+
+    color: #777d89;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   SUGGESTIONS
+   ========================================================= */
+
+.suggestions {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 12px;
+
+    max-width: 650px;
+
+    margin: 35px auto;
+}
+
+.suggestion {
+    padding: 16px;
+
+    background: #10131a;
+
+    border: 1px solid #20242d;
+
+    border-radius: 12px;
+
+    color: #a7adba;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    transition: 0.25s;
+}
+
+.suggestion:hover {
+    border-color: #6941c6;
+
+    background: #131620;
+
+    transform: translateY(-2px);
+}
+
+.suggestion strong {
+    display: block;
+
+    color: white;
+
+    font-size: 12px;
+
+    margin-bottom: 5px;
+}
+
+.suggestion span {
+    font-size: 10px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================================
+   CHAT MESSAGES
+   ========================================================= */
+
+#messages {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+    width: 100%;
+}
+
+
+/* Individual message */
+
+.message {
+    display: flex;
+
+    width: 100%;
+
+    animation: messageAppear 0.25s ease;
+}
+
+
+/* Message animation */
+
+@keyframes messageAppear {
+
+    from {
+        opacity: 0;
+        transform: translateY(6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* Message content */
+
+.message-content {
+    max-width: 75%;
+
+    padding: 13px 16px;
+
+    border-radius: 14px;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    white-space: pre-wrap;
+
+    word-wrap: break-word;
+}
+
+
+/* =========================================================
+   USER MESSAGE
+   ========================================================= */
+
+.message.user {
+    justify-content: flex-end;
+}
+
+.message.user .message-content {
+    background: linear-gradient(
+        135deg,
+        #7c3aed,
+        #6366f1
+    );
+
+    color: white;
+
+    border-bottom-right-radius: 4px;
+
+    box-shadow: 0 5px 18px rgba(99, 102, 241, 0.12);
+}
+
+
+/* =========================================================
+   AI MESSAGE
+   ========================================================= */
+
+.message.ai {
+    justify-content: flex-start;
+}
+
+.message.ai .message-content {
+    background: #11141b;
+
+    border: 1px solid #252a34;
+
+    color: #d5d8df;
+
+    border-bottom-left-radius: 4px;
+}
+
+
+/* =========================================================
+   THINKING / LOADING
+   ========================================================= */
+
+.message.loading .message-content {
+    color: #858b98;
+
+    font-style: italic;
+}
+
+
+/* Loading animation */
+
+.message.loading .message-content::after {
+    content: "...";
+
+    display: inline-block;
+
+    width: 18px;
+
+    animation: dots 1.2s infinite;
+}
+
+@keyframes dots {
+
+    0% {
+        opacity: 0.2;
+    }
+
+    50% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0.2;
+    }
+
+}
+
+
+/* =========================================================
+   INPUT AREA
+   ========================================================= */
+
+.input-area {
+    position: fixed;
+
+    left: 250px;
+    right: 0;
+    bottom: 0;
+
+    padding: 20px 30px 25px;
+
+    background: linear-gradient(
+        transparent,
+        #08090d 35%
+    );
+
+    z-index: 50;
+}
+
+
+/* Input box */
+
+.input-wrapper {
+    max-width: 850px;
+
+    margin: auto;
+
+    display: flex;
+
+    align-items: center;
+
+    padding: 8px;
+
+    background: #11141b;
+
+    border: 1px solid #292e39;
+
+    border-radius: 15px;
+
+    transition: 0.25s;
+}
+
+.input-wrapper:focus-within {
+    border-color: #6042b5;
+
+    box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.08);
+}
+
+
+/* Input */
+
+.input-wrapper input {
+    flex: 1;
+
+    min-width: 0;
+
+    padding: 13px;
+
+    border: 0;
+
+    outline: none;
+
+    background: transparent;
+
+    color: white;
+
+    font-size: 13px;
+}
+
+.input-wrapper input::placeholder {
+    color: #626875;
+}
+
+
+/* Send button */
+
+.send-btn {
+    width: 42px;
+    height: 42px;
+
+    flex-shrink: 0;
+
+    border: 0;
+
+    border-radius: 11px;
+
+    background: linear-gradient(
+        135deg,
+        #7c3aed,
+        #6366f1
+    );
+
+    color: white;
+
+    cursor: pointer;
+
+    font-size: 17px;
+
+    transition: 0.2s;
+}
+
+.send-btn:hover {
+    transform: scale(1.05);
+
+    box-shadow: 0 5px 18px rgba(124, 58, 237, 0.25);
+}
+
+.send-btn:active {
+    transform: scale(0.96);
+}
+
+.send-btn:disabled {
+    opacity: 0.6;
+
+    cursor: not-allowed;
+
+    transform: none;
+}
+
+
+/* Input note */
+
+.input-note {
+    max-width: 850px;
+
+    margin: 8px auto 0;
+
+    text-align: center;
+
+    color: #555b67;
+
+    font-size: 9px;
+}
+
+
+/* =========================================================
+   SCROLLBAR
+   ========================================================= */
+
+::-webkit-scrollbar {
+    width: 7px;
+}
+
+::-webkit-scrollbar-track {
+    background: #08090d;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #292e39;
+
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #3a4050;
+}
+
+
+/* =========================================================
+   RESPONSIVE - TABLET
+   ========================================================= */
+
+@media (max-width: 800px) {
+
+    .sidebar {
+        width: 70px;
+
+        padding: 22px 10px;
+    }
+
+    .logo {
+        justify-content: center;
+
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    .logo h2,
+    .logo p,
+    .nav button span,
+    .user div:last-child {
+        display: none;
+    }
+
+    .nav button {
+        text-align: center;
+
+        padding: 13px 5px;
+    }
+
+    .new-chat {
+        font-size: 0;
+
+        padding: 13px 5px;
+    }
+
+    .new-chat::first-letter {
+        font-size: 18px;
+    }
+
+    .main {
+        margin-left: 70px;
+    }
+
+    .input-area {
+        left: 70px;
+    }
+
+    .suggestions {
+        grid-template-columns: 1fr;
+    }
+
+    .message-content {
+        max-width: 85%;
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+   ========================================================= */
+
+@media (max-width: 500px) {
+
+    .sidebar {
+        width: 60px;
+
+        padding: 15px 7px;
+    }
+
+    .logo-icon {
+        width: 38px;
+        height: 38px;
+    }
+
+    .main {
+        margin-left: 60px;
+    }
+
+    .header {
+        height: 65px;
+
+        padding: 0 15px;
+    }
+
+    .header-title h1 {
+        font-size: 15px;
+    }
+
+    .header-title p {
+        display: none;
+    }
+
+    .status {
+        font-size: 10px;
+    }
+
+    .chat {
+        padding: 30px 15px 150px;
+    }
+
+    .welcome {
+        margin-top: 45px;
+    }
+
+    .welcome h2 {
+        font-size: 24px;
+    }
+
+    .welcome p {
+        font-size: 12px;
+    }
+
+    .ai-symbol {
+        width: 60px;
+        height: 60px;
+
+        font-size: 27px;
+    }
+
+    .suggestions {
+        margin-top: 25px;
+    }
+
+    .suggestion {
+        padding: 14px;
+    }
+
+    .message-content {
+        max-width: 90%;
+
+        font-size: 12px;
+
+        padding: 11px 14px;
+    }
+
+    .input-area {
+        left: 60px;
+
+        padding: 15px 10px 18px;
+    }
+
+    .input-wrapper {
+        padding: 6px;
+    }
+
+    .input-wrapper input {
+        padding: 11px;
+
+        font-size: 12px;
+    }
+
+    .send-btn {
+        width: 38px;
+        height: 38px;
+
+        font-size: 15px;
+    }
+}
