@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>NOVA AI</title>
+
+    <link rel="stylesheet"
+          href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+
+    <!-- SIDEBAR -->
+
+    <aside class="sidebar">
+
+        <div class="logo">
+
+            <div class="logo-icon">N</div>
+
+            <div>
+                <h2>NOVA AI</h2>
+                <p>Intelligent Assistant</p>
+            </div>
+
+        </div>
+
+
+        <button class="new-chat" id="newChatButton">
+            ＋ New Chat
+        </button>
+
+
+        <nav class="nav">
+
+            <button class="active">
+                💬 <span>AI Chat</span>
+            </button>
+
+            <button>
+                ✦ <span>AI Tools</span>
+            </button>
+
+            <button>
+                ◷ <span>Chat History</span>
+            </button>
+
+            <button>
+                ⚙ <span>Settings</span>
+            </button>
+
+        </nav>
+
+
+        <div class="sidebar-bottom">
+
+            <div class="user">
+
+                <div class="avatar">
+                    SK
+                </div>
+
+                <div>
+                    <strong>Suresh</strong>
+                    <span>Free Account</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </aside>
+
+
+    <!-- MAIN -->
+
+    <main class="main">
+
+        <!-- HEADER -->
+
+        <header class="header">
+
+            <div class="header-title">
+
+                <h1>AI Chat</h1>
+
+                <p>Your intelligent digital assistant</p>
+
+            </div>
+
+
+            <div class="status">
+
+                <div class="status-dot"></div>
+
+                AI Online
+
+            </div>
+
+        </header>
+
+
+        <!-- CHAT AREA -->
+
+        <section class="chat" id="chatBox">
+
+
+            <!-- WELCOME SCREEN -->
+
+            <div class="welcome" id="welcomeScreen">
+
+                <div class="ai-symbol">
+                    ✦
+                </div>
+
+
+                <h2>
+                    Hello, <span>Suresh</span>
+                </h2>
+
+
+                <p>
+                    I'm your AI assistant. Ask me anything,
+                    generate ideas, write content, explain concepts,
+                    or use one of the AI tools.
+                </p>
+
+
+                <!-- SUGGESTIONS -->
+
+                <div class="suggestions">
+
+
+                    <button class="suggestion">
+
+                        <strong>💡 Explain something</strong>
+
+                        <span>
+                            Explain a difficult topic in simple words
+                        </span>
+
+                    </button>
+
+
+                    <button class="suggestion">
+
+                        <strong>✍️ Write something</strong>
+
+                        <span>
+                            Create emails, articles and content
+                        </span>
+
+                    </button>
+
+
+                    <button class="suggestion">
+
+                        <strong>💻 Help with code</strong>
+
+                        <span>
+                            Debug, explain or generate code
+                        </span>
+
+                    </button>
+
+
+                    <button class="suggestion">
+
+                        <strong>🚀 Generate ideas</strong>
+
+                        <span>
+                            Get creative ideas for your projects
+                        </span>
+
+                    </button>
+
+
+                </div>
+
+            </div>
+
+
+            <!-- AI / USER MESSAGES -->
+
+            <div id="messages"></div>
+
+
+        </section>
+
+
+        <!-- INPUT AREA -->
+
+        <div class="input-area">
+
+            <div class="input-wrapper">
+
+                <input
+                    type="text"
+                    id="messageInput"
+                    placeholder="Ask NOVA anything..."
+                    autocomplete="off"
+                >
+
+
+                <button
+                    class="send-btn"
+                    id="sendButton"
+                    type="button"
+                >
+                    ➤
+                </button>
+
+            </div>
+
+
+            <p class="input-note">
+                NOVA AI can make mistakes. Verify important information.
+            </p>
+
+        </div>
+
+
+    </main>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>
